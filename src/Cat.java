@@ -9,12 +9,15 @@ public class Cat
     private double minWeight;
     private double maxWeight;
 
+
+
     public Cat()
     {
         weight = Math.round(1500.0 + 3000.0 * Math.random());
         originWeight = Math.round(weight);
         minWeight = 1000.0;
         maxWeight = 9000.0;
+        sumEatenFood = 0;
 
     }
 
@@ -31,6 +34,7 @@ public class Cat
 
     public void feed(Double amount)
     {
+        sumEatenFood  = sumEatenFood + amount;
         weight = weight + amount;
     }
 
@@ -44,9 +48,7 @@ public class Cat
         return weight;
     }
 
-    public Double getEatenFood(Double actualWeight){
-        return sumEatenFood = actualWeight - originWeight;
-    }
+    public Double getEatenFood(){ return sumEatenFood;}
 
     public String getStatus()
     {

@@ -11,12 +11,12 @@ public class Loader
         catFirst.feed(feed);
         System.out.println("First cat weight:" + catFirst.getWeight());
         System.out.println("----------------------------------------");
-        System.out.println("First cat ate " + catFirst.getEatenFood(catFirst.getWeight()) + " grams of food");
+        System.out.println("First cat ate " + catFirst.getEatenFood() + " grams of food");
 
         catFirst.feed(250.0);
         System.out.println("First cat weight:" + catFirst.getWeight());
 
-        System.out.println("First cat ate " + catFirst.getEatenFood(catFirst.getWeight()) + " grams of food.");
+        System.out.println("First cat ate " + catFirst.getEatenFood() + " grams of food.");
         catFirst.pee(100.0);
         System.out.println("The first cat weight after his went to the toilet is: " + catFirst.getWeight() + " grams.");
         System.out.println("----------------------------------------");
@@ -34,6 +34,8 @@ public class Loader
         }
 
         System.out.println("First cat weight:" + catFirst.getWeight());
+        System.out.println("First cat ate " + catFirst.getEatenFood() + " grams of food");
+        System.out.println("----------------------------------------");
         System.out.println("First cat status:" + catFirst.getStatus());
         System.out.println("=================================================");
 
