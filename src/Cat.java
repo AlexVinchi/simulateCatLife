@@ -2,6 +2,8 @@
 public class Cat
 {
     private double originWeight;
+
+    private double sumEatenFood;
     private double weight;
 
     private double minWeight;
@@ -22,6 +24,10 @@ public class Cat
         return "Meow";
         //System.out.println("Meow");
     }
+    public void pee(Double lostWeight){
+        weight = weight - lostWeight;
+        System.out.println("The cat went to the toilet and lost weight " + lostWeight + " grams");
+    }
 
     public void feed(Double amount)
     {
@@ -36,6 +42,10 @@ public class Cat
     public Double getWeight()
     {
         return weight;
+    }
+
+    public Double getEatenFood(Double actualWeight){
+        return sumEatenFood = actualWeight - originWeight;
     }
 
     public String getStatus()

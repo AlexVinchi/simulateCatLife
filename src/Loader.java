@@ -10,6 +10,16 @@ public class Loader
         double feed = 10;
         catFirst.feed(feed);
         System.out.println("First cat weight:" + catFirst.getWeight());
+        System.out.println("----------------------------------------");
+        System.out.println("First cat ate " + catFirst.getEatenFood(catFirst.getWeight()) + " grams of food");
+
+        catFirst.feed(250.0);
+        System.out.println("First cat weight:" + catFirst.getWeight());
+
+        System.out.println("First cat ate " + catFirst.getEatenFood(catFirst.getWeight()) + " grams of food.");
+        catFirst.pee(100.0);
+        System.out.println("The first cat weight after his went to the toilet is: " + catFirst.getWeight() + " grams.");
+        System.out.println("----------------------------------------");
 
         int i = 0;
         int m = 1;
@@ -26,7 +36,6 @@ public class Loader
         System.out.println("First cat weight:" + catFirst.getWeight());
         System.out.println("First cat status:" + catFirst.getStatus());
         System.out.println("=================================================");
-
 
         var catSecond = new Cat();
 
