@@ -10,6 +10,8 @@ public class Cat
     private final double maxWeight;
 
     static int totalCountCats;
+    static final int minWeightCat = 1000;
+    static final int maxWeightCat = 9000;
 
     static int getCoutCats(){
 
