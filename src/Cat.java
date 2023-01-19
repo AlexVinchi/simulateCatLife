@@ -1,13 +1,13 @@
 
 public class Cat
 {
-    private final double originWeight;
+    private double originWeight;
 
     private double sumEatenFood;
     private double weight;
 
-    private final double minWeight;
-    private final double maxWeight;
+    private double minWeight;
+    private double maxWeight;
 
     static int totalCountCats;
     static final int minWeightCat = 1000;
@@ -27,6 +27,11 @@ public class Cat
         sumEatenFood = 0;
         totalCountCats++;
 
+    }
+    public Cat(double weight)
+    {
+        this();
+        this.weight = weight;
     }
 
     public String meow()

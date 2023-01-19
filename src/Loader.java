@@ -3,7 +3,12 @@ public class Loader
 {
     public static void main(String[] args)
     {
-        Cat catFirst = new Cat();
+        Cat kitten = getKitten(1100);
+        System.out.println("Generated new kitten but using private method 'getKitten' and weight output:" + kitten.getWeight());
+
+        System.out.println("----------------------------------------");
+
+        Cat catFirst = new Cat(5000);
 
         System.out.println("First cat weight:" + catFirst.getWeight());
         System.out.println("Total live cats counted: " + Cat.getCoutCats());
@@ -66,5 +71,9 @@ public class Loader
         System.out.println("Second cat status:" + catSecond.getStatus());
         System.out.println("Total live cats counted:" + Cat.getCoutCats());
 
+    }
+
+    private static Cat getKitten(double weight){
+        return new Cat(weight);
     }
 }
