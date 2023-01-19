@@ -9,6 +9,8 @@ public class Cat
     private double minWeight;
     private double maxWeight;
 
+    private boolean catALive;
+
     private String colorCat;
 
     static int totalCountCats;
@@ -34,6 +36,13 @@ public class Cat
     {
         this();
         this.weight = weight;
+    }
+
+    public boolean isCatALive(){
+        if (getStatus().equals("Dead") || getStatus().equals("Exploded")){
+            return false;
+        }else
+            return true;
     }
 
     public void setColorCat(String colorCat){

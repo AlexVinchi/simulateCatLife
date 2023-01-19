@@ -7,6 +7,7 @@ public class Loader
         kitten.setColorCat(String.valueOf(CatColor.BLACK));
         System.out.println("Generated new kitten but using private method 'getKitten' and weight output:" + kitten.getWeight());
         System.out.println("Kitten color is:" + kitten.getColorCat());
+        System.out.println("Kitten is a live:"+kitten.isCatALive());
         System.out.println("----------------------------------------");
 
         Cat catFirst = new Cat(5000);
@@ -44,6 +45,7 @@ public class Loader
         System.out.println("First cat ate " + catFirst.getEatenFood() + " grams of food");
         System.out.println("----------------------------------------");
         System.out.println("First cat status:" + catFirst.getStatus());
+        System.out.println("First cat is a live:"+catFirst.isCatALive());
         System.out.println("Total live cats counted: " + Cat.getCoutCats());
         System.out.println("=================================================");
 
