@@ -38,6 +38,11 @@ public class Cat
         this.weight = weight;
     }
 
+    public void dublicateCat(double weight, String colorCat){
+        this.weight = weight;
+        this.colorCat = colorCat;
+    }
+
     public boolean isCatALive(){
         if (getStatus().equals("Dead") || getStatus().equals("Exploded")){
             return false;

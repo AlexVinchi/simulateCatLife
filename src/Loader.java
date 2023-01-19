@@ -8,11 +8,20 @@ public class Loader
         System.out.println("Generated new kitten but using private method 'getKitten' and weight output:" + kitten.getWeight());
         System.out.println("Kitten color is:" + kitten.getColorCat());
         System.out.println("Kitten is a live:"+kitten.isCatALive());
+        Cat catCloneKitten = getKitten(0);
+        catCloneKitten.dublicateCat(kitten.getWeight(),kitten.getColorCat());
+        System.out.println("This is clone First cat, his weight is '" + catCloneKitten.getWeight() + "' and cat color is '" +catCloneKitten.getColorCat() + "'");
+
         System.out.println("----------------------------------------");
 
         Cat catFirst = new Cat(5000);
 
         System.out.println("First cat weight:" + catFirst.getWeight());
+
+        //Clone firs cat
+        Cat catDublicateFirstCat = new Cat();
+        catDublicateFirstCat.dublicateCat(catFirst.getWeight(),catFirst.getColorCat());
+        System.out.println("This is clone First cat, his weight is '" + catDublicateFirstCat.getWeight() + "' and cat color is '" +catDublicateFirstCat.getColorCat() + "'");
         System.out.println("Total live cats counted: " + Cat.getCoutCats());
 
         double feed = 10;
