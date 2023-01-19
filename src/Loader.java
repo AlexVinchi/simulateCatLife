@@ -4,8 +4,9 @@ public class Loader
     public static void main(String[] args)
     {
         Cat kitten = getKitten(1100);
+        kitten.setColorCat(String.valueOf(CatColor.BLACK));
         System.out.println("Generated new kitten but using private method 'getKitten' and weight output:" + kitten.getWeight());
-
+        System.out.println("Kitten color is:" + kitten.getColorCat());
         System.out.println("----------------------------------------");
 
         Cat catFirst = new Cat(5000);

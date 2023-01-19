@@ -9,6 +9,8 @@ public class Cat
     private double minWeight;
     private double maxWeight;
 
+    private String colorCat;
+
     static int totalCountCats;
     static final int minWeightCat = 1000;
     static final int maxWeightCat = 9000;
@@ -32,6 +34,14 @@ public class Cat
     {
         this();
         this.weight = weight;
+    }
+
+    public void setColorCat(String colorCat){
+        this.colorCat = colorCat;
+    }
+
+    public String getColorCat() {
+        return colorCat;
     }
 
     public String meow()
