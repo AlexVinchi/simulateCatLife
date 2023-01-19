@@ -25,7 +25,7 @@ public class Loader
         int i = 0;
         int m = 1;
 
-        while (catFirst.getStatus() != "Dead"){
+        while (!catFirst.getStatus().equals("Dead")){
             i++;
             if (i == 100){
                 System.out.println(catFirst.meow() + " count meow:" + m * 100);
@@ -53,7 +53,7 @@ public class Loader
         m = 1;
         feed = 100;
 
-        while (catSecond.getStatus() != "Exploded"){
+        while (!catSecond.getStatus().equals("Exploded")){
             i++;
             if (i == 100){
                 catSecond.feed(feed);

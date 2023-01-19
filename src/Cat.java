@@ -1,13 +1,13 @@
 
 public class Cat
 {
-    private double originWeight;
+    private final double originWeight;
 
     private double sumEatenFood;
     private double weight;
 
-    private double minWeight;
-    private double maxWeight;
+    private final double minWeight;
+    private final double maxWeight;
 
     static int totalCountCats;
 
@@ -30,7 +30,7 @@ public class Cat
     public String meow()
     {
         weight = weight - 1;
-        if (getStatus() == "Dead") {
+        if (getStatus().equals("Dead")) {
             totalCountCats--;
         }
         return "Meow";
@@ -45,7 +45,7 @@ public class Cat
     {
         sumEatenFood  = sumEatenFood + amount;
         weight = weight + amount;
-        if (getStatus() == "Exploded") {
+        if (getStatus().equals("Exploded")) {
             totalCountCats--;
         }
     }
@@ -53,7 +53,7 @@ public class Cat
     public void drink(Double amount)
     {
         weight = weight + amount;
-        if (getStatus() == "Exploded") {
+        if (getStatus().equals("Exploded")) {
             totalCountCats--;
         }
 
