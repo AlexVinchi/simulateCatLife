@@ -6,6 +6,7 @@ public class Loader
         Cat catFirst = new Cat();
 
         System.out.println("First cat weight:" + catFirst.getWeight());
+        System.out.println("Total live cats counted: " + Cat.getCoutCats());
 
         double feed = 10;
         catFirst.feed(feed);
@@ -37,12 +38,13 @@ public class Loader
         System.out.println("First cat ate " + catFirst.getEatenFood() + " grams of food");
         System.out.println("----------------------------------------");
         System.out.println("First cat status:" + catFirst.getStatus());
+        System.out.println("Total live cats counted: " + Cat.getCoutCats());
         System.out.println("=================================================");
 
         var catSecond = new Cat();
 
         System.out.println("Second cat weight:" + catSecond.getWeight());
-
+        System.out.println("Total live cats counted: " + Cat.getCoutCats());
 
         catFirst.feed(feed);
         System.out.println("Second cat weight:" + catSecond.getWeight());
@@ -62,13 +64,7 @@ public class Loader
         }
         System.out.println("Second cat weight:" + catSecond.getWeight());
         System.out.println("Second cat status:" + catSecond.getStatus());
+        System.out.println("Total live cats counted:" + Cat.getCoutCats());
 
-
-
-        /*
-        var cat = new Cat();
-
-        System.out.println(cat.getStatus());
-        */
     }
 }

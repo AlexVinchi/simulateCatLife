@@ -9,7 +9,12 @@ public class Cat
     private double minWeight;
     private double maxWeight;
 
+    static int totalCountCats;
 
+    static int getCoutCats(){
+
+        return totalCountCats;
+    }
 
     public Cat()
     {
@@ -18,12 +23,16 @@ public class Cat
         minWeight = 1000.0;
         maxWeight = 9000.0;
         sumEatenFood = 0;
+        totalCountCats++;
 
     }
 
     public String meow()
     {
         weight = weight - 1;
+        if (getStatus() == "Dead") {
+            totalCountCats--;
+        }
         return "Meow";
         //System.out.println("Meow");
     }
@@ -36,11 +45,18 @@ public class Cat
     {
         sumEatenFood  = sumEatenFood + amount;
         weight = weight + amount;
+        if (getStatus() == "Exploded") {
+            totalCountCats--;
+        }
     }
 
     public void drink(Double amount)
     {
         weight = weight + amount;
+        if (getStatus() == "Exploded") {
+            totalCountCats--;
+        }
+
     }
 
     public Double getWeight()
